@@ -1,0 +1,75 @@
+{
+  "name": "@jetio/fastify-validator",
+  "version": "1.0.0",
+  "description": "Drop-in Fastify schema compiler powered by @jetio/validator - 19x faster compilation than default with full JSON Schema compliance and advanced validation features.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "fastify",
+    "validation",
+    "schema",
+    "json-schema",
+    "ajv",
+    "validator",
+    "fastify-plugin",
+    "schema-compiler",
+    "json-schema-validator",
+    "jetio",
+    "performance",
+    "typescript"
+  ],
+  "homepage": "https://github.com/official-jetio/fastify-validator#readme",
+  "bugs": {
+    "url": "https://github.com/official-jetio/fastify-validator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/official-jetio/fastify-validator.git"
+  },
+  "license": "MIT",
+  "author": "The Great Venerable",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc && npm run bundle",
+    "clean": "rm -rf dist/",
+    "lint": "eslint src --ext .ts",
+    "bundle": "rollup -c",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "sideEffects": false,
+  "peerDependencies": {
+    "fastify": ">=4.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@types/node": "^25.3.1",
+    "rollup": "^4.59.0",
+    "rollup-plugin-filesize": "^7.0.0",
+    "rollup-plugin-visualizer": "^5.14.0",
+    "terser": "^5.46.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@jetio/validator": "^1.0.8"
+  }
+}
