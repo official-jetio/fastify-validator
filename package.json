@@ -1,6 +1,6 @@
 {
   "name": "@jetio/fastify-validator",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Drop-in Fastify schema compiler powered by @jetio/validator - 19x faster compilation than default with full JSON Schema compliance and advanced validation features.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -70,6 +70,6 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@jetio/validator": "^1.0.8"
+    "@jetio/validator": "^2.0.0"
   }
 }
